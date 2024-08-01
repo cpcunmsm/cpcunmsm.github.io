@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitive Programming Club UNMSM</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Club de Programación Competitiva FISI - UNMSM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="img/logotipo.png" alt="Club de Programación Competitiva FISI - UNMSM">
-        <ul>
-            <li>Inicio</li>
-            <li>Nosotros</li>
-            <li>Beneficios</li>
-            <li>Eventos</li>
-            <li>Únete</li>
-            <li>Contacto</li>
-        </ul>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span class="menu-icon"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li class="dropdown">
+                    <a href="#">Más</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#unete">Únete</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="inicio">
             <h1>Club de Programación Competitiva <br>FISI - UNMSM</h1>
-            <p>¡Síguenos para estar al tanto de nuestras aventuras o da el primer paso para ser parte de nuestra comunidad!</p>
+            <p>¡Síguenos para estar al tanto de nuestras aventuras o da el primer paso para ser parte de nuestra
+                comunidad!</p>
         </section>
         <section id="nosotros">
             <h2>Nosotros</h2>
-            <p>Bienvenido al Club de Programación Competitiva de la Facultad de Ingeniería de Sistemas e Informática (FISI) de la Universidad Nacional Mayor de San Marcos (UNMSM). Nos dedicamos a cultivar el talento y la excelencia en programación competitiva, preparando a nuestros miembros para destacarse en competencias nacionales e internacionales.</p>
+            <p>Bienvenido al Club de Programación Competitiva de la Facultad de Ingeniería de Sistemas e Informática
+                (FISI) de la Universidad Nacional Mayor de San Marcos (UNMSM). Nos dedicamos a cultivar el talento y la
+                excelencia en programación competitiva, preparando a nuestros miembros para destacarse en competencias
+                nacionales e internacionales.</p>
         </section>
         <section id="beneficios">
             <h2>Beneficios</h2>
@@ -44,7 +61,8 @@
                 </li>
                 <li>
                     <h3>Mentoría y capacitación</h3>
-                    <p>Recibe entrenamiento y mentoría de expertos destacados en el campo de la programación competitiva.</p>
+                    <p>Recibe entrenamiento y mentoría de expertos destacados en el campo de la programación
+                        competitiva.</p>
                 </li>
             </ul>
         </section>
@@ -75,15 +93,17 @@
                 </li>
             </ol>
         </section>
-        <section id="contactoi">
+        <section id="contacto">
             <h2>Contacto</h2>
             <img src="img/logotipo.png" alt="Club de Programación Competitiva FISI - UNMSM">
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Club de Programación Competitiva FISI - UNMSM. Desarrollado por <a href="https://jorgektch.github.io/" target="_blank">Jorge Jesús</a>.</p>
+        <p>&copy; <span id="year"></span> Club de Programación Competitiva FISI - UNMSM. Desarrollado por <a
+                href="https://jorgektch.github.io/" target="_blank">Jorge Jesús</a>.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>
