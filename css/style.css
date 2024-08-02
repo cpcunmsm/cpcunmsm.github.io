@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #F5F5F5;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -61,7 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #1E1E1E; /* Color del texto del menú */
     text-decoration: none;
     font-weight: 600;
     padding: 10px 15px;
@@ -69,8 +69,9 @@ nav ul li a {
     cursor: pointer;
 }
 
-nav ul li a:hover {
-    background-color: #555;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ECB941; /* Color para el estado activo y al pasar el cursor */
 }
 
 .menu-toggle {
@@ -129,6 +130,34 @@ nav ul li a:hover {
     }
 }
 
+/* Secciones */
+/* Estilos para los títulos de sección */
+section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+section h2 {
+    font-size: 2em; /* Tamaño de fuente doble */
+    margin: 0;
+    padding: 20px 0; /* Espaciado adecuado alrededor del título */
+}
+
+section p, section ul, section ol {
+    font-size: 1em; /* Tamaño de fuente para el contenido */
+}
+
+/* Ajustes para asegurar que los títulos estén centrados y con padding */
+#nosotros h2,
+#beneficios h2,
+#eventos h2,
+#unete h2,
+#contacto h2 {
+    margin-bottom: 40px; /* Espacio extra debajo de los títulos para separar del contenido */
+}
+
+
+
 /* Inicio */
 #inicio {
     height: 500px;
@@ -154,6 +183,7 @@ nav ul li a:hover {
     background-color: #fff;
     padding: 20px;
     color: #333; /* Color del texto */
+    
 }
 
 #nosotros .text {
@@ -234,20 +264,18 @@ nav ul li a.active {
     justify-content: center;
 }
 
+/* Ajustes específicos de la sección Beneficios */
 #beneficios .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center; /* Centra los items en la sección */
 }
 
 #beneficios .item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    flex: 0 0 45%; /* Cada columna ocupa aproximadamente la mitad del ancho disponible */
+    flex: 0 0 45%;
     max-width: 45%;
-    min-width: 300px; /* Asegura que los elementos no sean demasiado pequeños */
+    min-width: 300px;
+    margin: 10px;
 }
 
 #beneficios .item img {
@@ -257,15 +285,14 @@ nav ul li a.active {
 }
 
 #beneficios .item h3 {
-    margin: 0;
     font-size: 1.2em;
 }
 
 #beneficios .item p {
-    margin: 5px 0 0 0;
+    font-size: 1em;
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Responsividad */
 @media (max-width: 768px) {
     #beneficios .item {
         flex: 0 0 100%;
