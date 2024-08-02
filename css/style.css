@@ -349,6 +349,8 @@ section h2 {
 #eventos {
     background-color: #F5F5F5;
     padding: 20px;
+    padding-top: 3em;
+    padding-bottom: 5em;
 }
 
 #eventos h2 {
@@ -399,6 +401,10 @@ section h2 {
     text-transform: uppercase;
 }
 
+.c-next-button {
+    background-color: #ECB941;
+}
+
 .content-calendar{
     padding: 2rem;
 }
@@ -443,6 +449,14 @@ section h2 {
     color: #ffffff;
     background-color: #982E22;
     text-align: center;
+    padding: 20px;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#unete h2 {
+    text-align: center;
+    margin-bottom: 2.75em;
 }
 
 /* Estilo para la lista#unete  ordenada */
@@ -479,9 +493,9 @@ section h2 {
     display: block;
     background-color: white;
     color: #982E22;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 50%;
     font-weight: bold;
     margin: 0 auto 10px;
@@ -494,6 +508,7 @@ section h2 {
 
 /* Estilo para el h3 */
 #unete .content-wrapper h3 {
+    padding-top: 1em;
     margin: 0;
     font-size: 1.2em;
 }
