@@ -1,8 +1,10 @@
 * {
     border: none;
+    /*border: red solid 1px;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
@@ -16,8 +18,8 @@ body {
 }
 
 header {
-    background-color: #F5F5F5;
-    color: #fff;
+    background-color: #ffffff;
+    color: #1E1E1E;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -56,10 +58,6 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
 nav ul li a {
     color: #1E1E1E; /* Color del texto del menú */
     text-decoration: none;
@@ -79,10 +77,12 @@ nav ul li a.active {
 }
 
 .menu-icon::before {
+    color: #1E1E1E;
     content: "☰"; /* Ícono del menú */
 }
 
 .menu-toggle.close .menu-icon::before {
+    color: #1E1E1E;
     content: "✖"; /* Ícono de cerrar el menú */
 }
 
@@ -91,7 +91,7 @@ nav ul li a.active {
     nav {
         flex-direction: column;
         align-items: flex-start;
-        background-color: #333;
+        background-color: #ffffff;
         position: absolute;
         top: 100%;
         left: 0;
@@ -114,6 +114,7 @@ nav ul li a.active {
     }
 
     nav ul li a {
+        color: #1E1E1E;
         padding: 10px 20px;
         width: 100%;
     }
@@ -122,7 +123,7 @@ nav ul li a.active {
         display: block; /* Mostrar el botón de menú en pantallas pequeñas */
         background: none;
         border: none;
-        color: #fff;
+        color: #ffffff;
         font-size: 24px;
         cursor: pointer;
         position: absolute;
@@ -156,126 +157,167 @@ section p, section ul, section ol {
     margin-bottom: 40px; /* Espacio extra debajo de los títulos para separar del contenido */
 }
 
+/* Estilos para los íconos de redes sociales */
+.social-follow {
+    text-align: center;
+    margin-top: 20px;
+}
 
+.social-follow p {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #333; /* Color del icono */
+    margin: 0 5px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    width: 40px; /* Ancho del ícono */
+    height: 40px; /* Alto del ícono */
+    line-height: 40px; /* Alineación vertical del ícono */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    text-align: center; /* Centrar ícono dentro del contenedor */
+}
+
+.social-icons a:hover {
+    background-color: #ECB941; /* Cambiar color de fondo al hacer hover */
+    color: #fff; /* Cambiar color del ícono al hacer hover */
+}
+
+
+
+/* Section */
+section {
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    font-weight: bold;
+    font-size: 2.5sem;
+}
 
 /* Inicio */
 #inicio {
-    height: 500px;
+    color: #ffffff;
     background-color: #1E1E1E;
-    color: #fff; /* Opcional: Cambia el color del texto para mejor contraste */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+    padding-top: 7em;
+    padding-bottom: 8em;
 }
-
-#inicio h1, #inicio p {
-    margin: 0;
-    padding: 0;
+#inicio h1 {
+    line-height: 1.0;
+}
+#inicio h1 span {
+    color: #ECB941;
+}
+#inicio p {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 /* Nosotros */
 #nosotros {
-    display: flex;
-    height: 500px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
-    color: #333; /* Color del texto */
-    
+    padding-top: 3em;
+    padding-bottom: 5em;
 }
 
-#nosotros .text {
-    flex: 1;
-    padding-right: 20px;
+#nosotros h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+
 }
 
-#nosotros .images {
-    flex: 1;
+.text, .images {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.text {
+    padding: 20px;
+}
+
+.images {
     position: relative;
+    padding: 20px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
 }
 
-#nosotros .images img {
+.bg-image {
     position: absolute;
-    max-width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.coder-image {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
     height: auto;
 }
 
-#nosotros .images .bg-image {
-    z-index: 1;
-    opacity: 0.7; /* Transparencia de la imagen de fondo */
-}
-
-#nosotros .images .coder-image {
-    z-index: 2;
-    opacity: 0.9; /* Ajuste de transparencia para visibilidad */
-}
-
-/* Responsividad */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    #nosotros {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #nosotros .text, #nosotros .images {
-        flex: none;
+    .text, .images {
         width: 100%;
-        padding: 10px;
+        padding-bottom: 30px;
     }
-
-    #nosotros .images {
-        height: 300px; /* Fija una altura para el contenedor en móviles */
-    }
-
-    #nosotros .images img {
-        position: absolute;
-        width: auto;
-        max-height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* Beneficios */
-/* Estilo para el elemento seleccionado del menú */
-nav ul li a.active {
-    color: #ECB941;
 }
 
 /* Estilos para la sección Beneficios */
 #beneficios {
     background-color: #ECB941;
     color: #1E1E1E;
-    height: 600px;
     padding: 20px;
+    padding-top: 3em;
+    padding-bottom: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Ajustes específicos de la sección Beneficios */
 #beneficios .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los items en la sección */
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
 }
 
 #beneficios .item {
-    flex: 0 0 45%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex: 0 0 45%; /* Cada columna ocupa aproximadamente la mitad del ancho disponible */
     max-width: 45%;
-    min-width: 300px;
-    margin: 10px;
+    min-width: 300px; /* Asegura que los elementos no sean demasiado pequeños */
 }
 
 #beneficios .item img {
@@ -285,22 +327,40 @@ nav ul li a.active {
 }
 
 #beneficios .item h3 {
+    margin: 0;
     font-size: 1.2em;
 }
 
 #beneficios .item p {
-    font-size: 1em;
+    margin: 5px 0 0 0;
 }
 
-/* Responsividad */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     #beneficios .item {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    #beneficios {
+        padding-top: 3em;
+        padding-bottom: 5em;
+    }
 }
 
+/* Eventos */
+#eventos {
+    background-color: #F5F5F5;
+}
 
+/* Únete */
+#unete {
+    background-color: #982E22;
+}
+
+/* Contacto */
+#contacto {
+    background-color: #F5F5F5;
+}
 
 /* Footer */
 footer {
