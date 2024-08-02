@@ -45,8 +45,10 @@
             <div class="content-wrapper">
                 <div class="text">
                     <p>Bienvenido al Club de Programación Competitiva de la Facultad de Ingeniería de Sistemas e
-                        Informática (FISI) de la Universidad Nacional Mayor de San Marcos (UNMSM). Nos dedicamos a cultivar el
-                        talento y la excelencia en programación competitiva, preparando a nuestros miembros para destacarse en
+                        Informática (FISI) de la Universidad Nacional Mayor de San Marcos (UNMSM). Nos dedicamos a
+                        cultivar el
+                        talento y la excelencia en programación competitiva, preparando a nuestros miembros para
+                        destacarse en
                         competencias nacionales e internacionales.</p>
                 </div>
                 <div class="images">
@@ -90,32 +92,49 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sección de Eventos -->
         <section id="eventos">
             <h2>Eventos</h2>
-            <h3>Convocatorias vigentes</h3>
-
-            <h3>Próximas actividades</h3>
-            <ul>
-                <li>Sesiones de Entrenamiento: Todos los sábados a las 10:00 a.m. en el laboratorio de la FISI.</li>
-                <li>Competencia Interna: Clasificación para el equipo que representará a la UNMSM en el ICPC.</li>
-            </ul>
+            <div class="content-wrapper">
+                <div class="text">
+                    <h3>Convocatorias vigentes</h3>
+                    <a href="https://forms.gle/Rk1pWyftBD5USumf9" target="_blank" class="inscription-button">Link de
+                        inscripción</a>
+                    <br>
+                    <h3>Próximas actividades</h3>
+                    <ul>
+                        <li>Sesiones de Entrenamiento: Todos los sábados a las 10:00 a.m. en el laboratorio de la FISI.
+                        </li>
+                        <li>Competencia Interna: Clasificación para el equipo que representará a la UNMSM en el ICPC.
+                        </li>
+                    </ul>
+                </div>
+                <div class="calendar">
+                    <!-- Contenedor para el calendario -->
+                    <div class="content-calendar" id="calendar"></div>
+                </div>
+            </div>
         </section>
+
         <section id="unete">
             <h2>Únete</h2>
-            <ol>
-                <li>
-                    <h3>Regístrate</h3>
-                    <p>Regístrate el formulario de inscripción de la convocatoria vigente.</p>
-                </li>
-                <li>
-                    <h3>Participa</h3>
-                    <p>Participa del contest de selección de la convocatoria vigente.</p>
-                </li>
-                <li>
-                    <h3>Compite</h3>
-                    <p>Únete a la selección y representa a la UNMSM en competencias.</p>
-                </li>
-            </ol>
+            <div class="content-wrapper">
+                <ol>
+                    <li>
+                        <h3>Regístrate</h3>
+                        <p>Regístrate el formulario de inscripción de la convocatoria vigente.</p>
+                    </li>
+                    <li>
+                        <h3>Participa</h3>
+                        <p>Participa del contest de selección de la convocatoria vigente.</p>
+                    </li>
+                    <li>
+                        <h3>Compite</h3>
+                        <p>Únete a la selección y representa a la UNMSM en competencias.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
         <section id="contacto">
             <h2>Contacto</h2>
@@ -127,6 +146,10 @@
         <p>&copy; <span id="year"></span> Club de Programación Competitiva FISI - UNMSM. Desarrollado por <a
                 href="https://jorgektch.github.io/" target="_blank">Jorge Jesús</a>.</p>
     </footer>
+
+    <!-- Enlace a FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js"></script>
+    <!-- Scripts personalizados -->
     <script src="js/script.js"></script>
 </body>
 

@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Calendario
+    var elementCalendar = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(elementCalendar, {
+        buttonText: {today: 'Hoy'},
+        initialView: 'dayGridMonth',
+        events: 'data/data.json'
+    });
+    calendar.setOption('locale', 'es');
+    calendar.render();
+
     // Actualizar el año en el pie de página
     document.getElementById('year').textContent = new Date().getFullYear();
 

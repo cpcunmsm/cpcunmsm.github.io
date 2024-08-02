@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -245,7 +244,6 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: center; /* Alinea los elementos verticalmente al centro */
-
 }
 
 .text, .images {
@@ -350,11 +348,182 @@ section h2 {
 /* Eventos */
 #eventos {
     background-color: #F5F5F5;
+    padding: 20px;
 }
+
+#eventos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#eventos .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text {
+    width: 33.33%;
+    box-sizing: border-box;
+    display: flex; /* Usar flexbox para centrar verticalmente */
+    flex-direction: column; /* Alinear elementos hijos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    padding: 20px;
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.calendar {
+    width: 66.66%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#calendar {
+    width: 100%;
+    height: auto; /* Ajuste automático de altura */
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+.fc-toolbar-title{
+    text-transform: lowercase;
+}
+.fc-toolbar-title::first-letter{
+    text-transform: uppercase;
+}
+
+.fc-event-title{
+    white-space: normal;
+}
+
+.fc-col-header-cell-cushion{
+    text-transform: uppercase;
+}
+
+.content-calendar{
+    padding: 2rem;
+}
+
+/* Estilos para el botón de inscripción */
+.inscription-button {
+    display: inline-block; /* Para comportarse como un botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    background-color: #1E1E1E; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Eliminar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Suavizar el cambio de color */
+}
+
+.inscription-button:hover {
+    color: #1E1E1E; /* Cambio de color al pasar el cursor */
+    background-color: #ECB941; /* Cambio de color al pasar el cursor */
+}
+
+#eventos .content-wrapper .text h3 {
+    padding-bottom: 0.5em;
+}
+
+#eventos .content-wrapper .text ul {
+    padding-left: 2em;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .text, .calendar {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 
 /* Únete */
 #unete {
+    color: #ffffff;
     background-color: #982E22;
+    text-align: center;
+}
+
+/* Estilo para la lista#unete  ordenada */
+.content-wrapper ol {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+/* Estilo para cada elemento de la lista */
+#unete .content-wrapper li {
+    flex: 1;
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Estilo para los números en círculos */
+#unete .content-wrapper li:nth-child(1)::before {
+    content: "1";
+}
+
+#unete .content-wrapper li:nth-child(2)::before {
+    content: "2";
+}
+
+#unete .content-wrapper li:nth-child(3)::before {
+    content: "3";
+}
+
+#unete .content-wrapper li::before {
+    display: block;
+    background-color: white;
+    color: #982E22;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    font-size: 16px;
+    position: absolute;
+    top: -40px; /* Ajusta según sea necesario para la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilo para el h3 */
+#unete .content-wrapper h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Estilo para el párrafo */
+#unete .content-wrapper p {
+    margin: 0;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    #unete .content-wrapper ol {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto; /* Asegura que el contenedor esté centrado horizontalmente */
+    }
+    
+    #unete .content-wrapper li {
+        margin-bottom: 30px;
+        position: static; /* Elimina el posicionamiento absoluto en pantallas pequeñas */
+        text-align: center;
+    }
+    
+    #unete .content-wrapper li::before {
+        position: static;
+        margin: 0 auto 10px;
+        transform: none; /* Elimina el ajuste de posición horizontal */
+        top: auto; /* Elimina el ajuste de posición vertical */
+    }
 }
 
 /* Contacto */
@@ -364,8 +533,8 @@ section h2 {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #FFFFFF;
+    color: #1E1E1E;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -374,7 +543,7 @@ footer {
 }
 
 footer a {
-    color: #1e90ff;
+    color: #ECB941;
     text-decoration: none;
 }
 
